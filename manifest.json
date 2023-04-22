@@ -1,0 +1,23 @@
+{
+    "manifest_version": 2,
+    "name": "Hide Twitter Blue",
+    "version": "1.2",
+    "description": "This extension hides the Twitter Blue button on Twitter.",
+    "permissions": [
+      "activeTab"
+    ],
+    "browser_action": {
+      "default_title": "Hide Twitter Blue",
+      "default_popup": "menu.html"
+    },
+    "content_scripts": [
+      {
+        "matches": [
+          "https://twitter.com/*"
+        ],
+        "js": [
+          "content.js"
+        ]
+      }
+    ]
+  }
